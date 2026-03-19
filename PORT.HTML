@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monika M | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap');
+        
+        :root {
+            --accent: #a855f7;
+            --accent-glow: rgba(168, 85, 247, 0.4);
+            --bg-main: #030303;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-main);
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .btn-neon {
+            position: relative;
+            background: var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+            transition: 0.3s;
+        }
+
+        .btn-neon:hover {
+            box-shadow: 0 0 30px var(--accent);
+            transform: scale(1.05);
+        }
+
+        .blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(80px);
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(20%, 20%); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blob"></div>
+    <div class="blob" style="bottom: 0; right: 0; animation-delay: -5s;"></div>
+
+    <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/5 py-5 px-8 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-widest text-white neon-text">MONIKA<span class="text-purple-500">.</span></div>
+        <div class="hidden md:flex gap-10 text-sm font-bold uppercase tracking-widest text-gray-400">
+            <a href="#home" class="hover:text-purple-400 transition">Home</a>
+            <a href="#about" class="hover:text-purple-400 transition">About</a>
+            <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6">
+        <div data-aos="zoom-in" class="mb-6 px-4 py-1 rounded-full border border-purple-500/30 bg-purple-500/5 text-purple-400 text-xs font-bold uppercase tracking-widest">
+            B.Tech Information Technology
+        </div>
+        <h1 data-aos="fade-up" class="text-7xl md:text-9xl font-black mb-6 tracking-tight text-white">
+            Creative <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">Developer</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="max-w-2xl text-gray-400 text-lg md:text-xl font-light mb-10 leading-relaxed">
+            I'm Monika M, a 2nd-year student at Nandha College of Technology. I specialize in UI/UX Design and Frontend Development to solve real-world problems.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="400" class="flex gap-6">
+            <a href="#projects" class="btn-neon px-10 py-4 rounded-full text-white font-bold transition-all">My Portfolio</a>
+            <a href="#contact" class="px-10 py-4 rounded-full border border-white/10 hover:border-purple-500 transition-all font-bold">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div data-aos="fade-up" class="glass-card p-10 rounded-3xl text-center">
+                <h3 class="text-4xl font-black text-white mb-2">8.14</h3>
+                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest">Current CGPA</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-10 rounded-3xl text-center">
+                <h3 class="text-4xl font-black text-white mb-2">GDG</h3>
+                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest">Community Lead(2025-2026)</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-10 rounded-3xl text-center">
+                <h3 class="text-4xl font-black text-white mb-2">2nd</h3>
+                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest">Year IT</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="glass-card p-10 rounded-3xl text-center">
+                <h3 class="text-4xl font-black text-white mb-2">UI/UX</h3>
+                <p class="text-gray-500 text-xs uppercase font-bold tracking-widest">Certified</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 max-w-7xl mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+            <h2 data-aos="fade-right" class="text-5xl font-black tracking-tighter">Featured <br> <span class="text-purple-500">Projects</span></h2>
+            <p data-aos="fade-left" class="max-w-md text-gray-500 font-medium">Combining security and community impact through modern digital solutions.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div data-aos="fade-up" class="glass-card p-12 rounded-[50px] group">
+                <div class="flex justify-between mb-10">
+                    <i class="fa-solid fa-shield-halved text-4xl text-purple-500"></i>
+                    <i class="fa-solid fa-arrow-right text-gray-700 group-hover:text-white transition"></i>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-white">Cybot-Guard</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    A cyber safety system focused on protecting children from harmful internet content by monitoring activities and blocking unsafe websites.
+                </p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] uppercase font-bold border border-white/10 px-3 py-1 rounded-full text-purple-400">Security</span>
+                    <span class="text-[10px] uppercase font-bold border border-white/10 px-3 py-1 rounded-full text-purple-400">Web Development</span>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-12 rounded-[50px] group">
+                <div class="flex justify-between mb-10">
+                    <i class="fa-solid fa-handshake-angle text-4xl text-purple-500"></i>
+                    <i class="fa-solid fa-arrow-right text-gray-700 group-hover:text-white transition"></i>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 text-white">Makkalhub</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    A community platform for rural citizens to raise infrastructure complaints and trade local products to support the local economy.
+                </p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] uppercase font-bold border border-white/10 px-3 py-1 rounded-full text-purple-400">Social Impact</span>
+                    <span class="text-[10px] uppercase font-bold border border-white/10 px-3 py-1 rounded-full text-purple-400">Rural Economics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-40 bg-zinc-950/30">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h2 data-aos="fade-up" class="text-6xl font-black mb-16 text-white">Let's <span class="text-purple-500">Connect</span></h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-16">
+                <a href="mailto:monika0522007@gmail.com" data-aos="fade-right" class="glass-card p-8 rounded-3xl flex items-center gap-4 hover:border-purple-500">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-envelope text-purple-400"></i>
+                    </div>
+                    <span class="text-sm font-semibold truncate text-gray-300">monika0522007@gmail.com</span>
+                </a>
+                <div data-aos="fade-left" class="glass-card p-8 rounded-3xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-phone text-purple-400"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-300">9342767465</span>
+                </div>
+            </div>
+            <div class="flex justify-center gap-10 mt-10">
+                <a href="https://github.com/monikamurugesan5207" target="_blank" class="text-3xl text-gray-600 hover:text-white transition-all duration-300"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/monika-m-91690538a" target="_blank" class="text-3xl text-gray-600 hover:text-white transition-all duration-300"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-700 text-xs font-bold uppercase tracking-[0.3em]">
+        Nandha College of Technology • Ayalur, Gobi(TK)
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+</html>
