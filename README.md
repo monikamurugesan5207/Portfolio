@@ -1,2 +1,2 @@
-# Portfolio
-frontend developer and UI/UX designer
+# portfolio 
+Open in any browser like Chrome,edge,and so on
